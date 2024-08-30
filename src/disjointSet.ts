@@ -1,4 +1,4 @@
-class DisjointSet<V> {
+export class DisjointSet<V> {
   private parent: Map<V, V>;
   private rank: Map<V, number>;
 

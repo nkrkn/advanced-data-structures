@@ -76,10 +76,12 @@ export class Trie<T extends ArrayLike<V>, V> {
     }
 
     currentNode.terminal = false;
-    if (currentNode.children.size === 0) {
+    // iteratively delete unneeded nodes using stack, stopping short of the root which is allowed to be empty
+    while (currentNode.children.size === 0 && traversedStack.length >= 1) {
       // we no longer need this node for now, so delete it from parent's children Map
       const parent = traversedStack.pop();
       parent.children.delete(value[value.length - 1]);
+      currentNode = parent;
     }
   }
 }

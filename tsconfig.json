@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     // Use ESM
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
 
     // We handle these with ESLint:
     "noUnusedLocals": false,

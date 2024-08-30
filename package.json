@@ -1,9 +1,9 @@
 {
-  "name": "@nkrkn/advanced-data-structures",
+  "name": "@nkrkn/data-structures",
   "version": "0.1.0",
-  "description": "Advanced data structures",
+  "description": "Data structures for JavaScript/TypeScript",
   "repository": {
-    "url": "https://github.com/nkrkn/advanced-data-structures"
+    "url": "https://github.com/nkrkn/data-structures"
   },
   "type": "module",
   "types": "./dist/esm/index.d.ts",
