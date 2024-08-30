@@ -1,6 +1,6 @@
 export class DisjointSet<V> {
-  private parent: Map<V, V>;
-  private rank: Map<V, number>;
+  parent: Map<V, V>;
+  rank: Map<V, number>;
 
   constructor(values: V[]) {
     this.parent = new Map<V, V>();
@@ -12,6 +12,7 @@ export class DisjointSet<V> {
   }
 
   find(v: V): V {
+    if (!this.parent.has(v)) return;
     if (this.parent.get(v) !== v) {
       this.parent.set(v, this.find(this.parent.get(v))); // Path compression
     }
